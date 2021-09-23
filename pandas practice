@@ -7,4 +7,16 @@ df.column_name.str.contains('조건')
 alist = [~~~~~]
 df[ df['column_name'].isin(alist)] 
 
-#
+# 3. 시간이 연속적으로 존재하며 결측치가 없는지 확인
+df['date_time'].diff().unique()   # 시간을 차분했을 경우 첫 값은 nan, 이후 모든 차분값이 동일하면 연속이라 판단한다.
+>> array([         'NaT', -3600000000000], dtype='timedelta64[ns]')
+check = len(df['date_time'].diff().unique())
+if check ==2:
+    Ans =True
+else:
+    Ans = False
+True > 시간이 연속적으로 존재하며 결측치가 없음
+False > 시간이 연속적으로 존재하지 않고 결측치가 존재함
+
+
+# 4.
