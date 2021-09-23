@@ -1,0 +1,10 @@
+# 특정 조건을 만족하는...
+
+# 1. 문자열이 포함되어 있는 경우
+df.column_name.str.contains('조건')
+
+# 2. 어떠한 조건이 있는 경우에만 출력(리스트의 값들...)
+alist = [~~~~~]
+df[ df['column_name'].isin(alist)] 
+
+#
