@@ -62,6 +62,8 @@ sklearn
 │   │
 │   ├── linear_model
 │   │   ├── LogisticRegression
+│   │   ├── LinearRegression
+│   │   ├── ElasticNet
 │   │   └── RidgeClassifier
 │   │
 │   ├── neighbors
